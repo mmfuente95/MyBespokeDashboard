@@ -3,7 +3,9 @@ import requests
 
 def classify_item(item):
     data = {'item': item}
-    response = requests.post('http://127.0.0.1:5000/classify', json=data)
+    # Update the URL to match the deployed app URL
+    # Example URL: 'https://your-app-name.streamlit.io/classify'
+    response = requests.post('https://mybespokedashboard-iyfaupeeciwhi3relcmxbm.streamlit.app/', json=data)
     result = response.json()['result']
     return result
 
